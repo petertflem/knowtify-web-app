@@ -1,0 +1,24 @@
+{
+  "name": "KnowitNotificationServiceWebApp",
+  "version": "0.0.1",
+  "description": "A web application for Knowit Notification Service",
+  "author": "Peter Tollnes Flem",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petertflem/kns-web-app"
+  },
+  "bugs": "https://github.com/petertflem/kns-web-app/issues",
+  "dependencies": {
+    "express": "^4.13.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.0.6",
+    "ws": "^0.7.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "license": "MIT"
+}
