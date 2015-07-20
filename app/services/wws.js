@@ -6,7 +6,7 @@ module.exports.init = function(server) {
   wss.on('connection', function (ws) {
     ws.on('message', function (data, flags) {
       data = JSON.parse(data);
-      console.log('[' + data.timestamp + '][' + data.level + '][' + data.origin + '] ' + data.message);
+      console.log('[' + data.timestamp + '][' + data.level + '][' + data.origin.npm_module + '][' + data.origin.filename + '] ' + data.message);
     });
   });
 }
