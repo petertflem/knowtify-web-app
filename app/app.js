@@ -12,6 +12,9 @@ var server = require("http").createServer(app);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
+/* Initialize the routes */
+require('./config/routes').initialize(app);
+
 /* Start the server */
 server.listen(port);
 
