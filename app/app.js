@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 /* Initialize the app */
 var express = require('express');
 var app = express();
-var server = require("http").createServer(app);
+var server = require("http").Server(app);
 
 /* Connect to the database */
 //mongoose.connect(require('./config/database').url);
@@ -21,4 +21,4 @@ app.set('views', __dirname + '/views');
 server.listen(port);
 
 // TEST
-require('./services/wws').init(server);
+require('./services/loging-stream').init(server);

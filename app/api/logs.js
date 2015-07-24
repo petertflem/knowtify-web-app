@@ -1,4 +1,4 @@
-var wws = require('../services/wws');
+var loggingStream = require('../services/loging-stream');
 
 module.exports = function (app) {
 
@@ -6,7 +6,7 @@ module.exports = function (app) {
    * POST: /api/logs
    */
   app.post('/api/logs', function (req, res) {
-    wws.publish(req.body.publishTargets, JSON.stringify(req.body.data));
+    loggingStream.sendLogs(req.body.data);
     res.sendStatus(200);
   });
 
