@@ -2,11 +2,15 @@ doctype html
 html
   head
     title kns web app
-
+  
+    link(rel='stylesheet', href='/stylesheets/css/vendor/bootstrap.min.css')
+  
     body
-      script(type='text/javascript').
-        var host = window.document.location.host.replace(/:.*/, '');
-        var ws = new WebSocket('ws://' + host + ':5000');
-        ws.onmessage = function (event) {
-          console.log(JSON.parse(event.data));
-        };
+      div.container
+        div.row
+          div.col-sm-12
+            h1 Hello! Here are your logs:
+            div#logs(style='font-family: "Courier New"')
+    
+    script(src='/javascript/vendor/jquery.min.js')    
+    script(src='/javascript/log-handler.js')
