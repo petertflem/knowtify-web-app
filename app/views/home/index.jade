@@ -10,22 +10,24 @@ html
       div.container
         div.row
           div.col-md-3.col-md-push-9.options
-            h1 Options
+            h1 &nbsp;
             
             h4 Metadata
             div.metadata
-              div(data-option='npm-module').location-information.option NPM Module
-              div(data-option='javascript-file').location-information.option Javascript file
-              div(data-option='function').location-information.option Function
-              div(data-option='line-number').location-information.option Line number
+              div(data-toggle-meta='timestamp').default-color.check Timestamp
+              div(data-toggle-meta='log-level').default-color.check Log Level
+              div(data-toggle-meta='npm-module').location-information.check NPM Module
+              div(data-toggle-meta='javascript-file').location-information Javascript file
+              div(data-toggle-meta='function').location-information Function
+              div(data-toggle-meta='line-number').location-information Line number
             
             h4 Log Level
             div.logging-level
-              div(data-option='log-level-debug').debug.option Debug
-              div(data-option='log-level-info').info.option Info
-              div(data-option='log-level-warning').warn.option Warning
-              div(data-option='log-level-error').error.option Error
-              div(data-option='log-level-fatal').fatal.option Fatal
+              div(data-filter='debug').debug.check Debug
+              div(data-filter='info').info.check Info
+              div(data-filter='warn').warn.check Warning
+              div(data-filter='error').error.check Error
+              div(data-filter='fatal').fatal.check Fatal
             
           div.col-md-9.col-md-pull-3
             h1 Hello! Here are your logs:

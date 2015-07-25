@@ -20,8 +20,10 @@ body {
   margin-right: 0;
 }
 
-.option {
+.metadata div,
+.logging-level div {
   padding: 1px 4px;
+  cursor: pointer;
 }
 
 .options .metadata div:not(:first-child),
@@ -47,52 +49,54 @@ body {
   background-color: #337ab7;
 }
 
-.options .debug:hover {
+.logging-level .debug:hover {
   background-color: #286090;
-  cursor: pointer;
 }
 
 .info {
   background-color: #5bc0de;
 }
 
-.options .info:hover {
+.logging-level .info:hover {
   background-color: #31b0d5;
-  cursor: pointer;
 }
 
 .warn {
   background-color: #f0ad4e;
 }
 
-.options .warn:hover {
+.logging-level .warn:hover {
   background-color: #ec971f;
-  cursor: pointer;
 }
 
 .error {
   background-color: #d9534f;
 }
 
-.options .error:hover {
+.logging-level .error:hover {
   background-color: #c9302c;
-  cursor: pointer;
 }
 
 .fatal {
   background-color: #d9534f;
 }
 
-.options .fatal:hover {
+.logging-level .fatal:hover {
   background-color: #c9302c;
-  cursor: pointer;
 }
 
 .location-information {
   background-color: #95acda;
 }
 
-.options .location-information:hover {
+.metadata .location-information:hover {
   background-color: #7c8fb6;
-  cursor: pointer;
+}
+
+.default-color {
+  background-color: #b5bfd1;
+}
+
+.metadata .default-color:hover {
+  background-color: #a2acbe;
 }
