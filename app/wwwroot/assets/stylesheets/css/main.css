@@ -1,0 +1,98 @@
+body {
+  background-color: #f1f1f1;
+}
+
+.logs,
+.options div {
+  font-family: "Courier New";
+}
+
+.logs span {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.logs span:first-child {
+  margin-left: 0;
+}
+
+.logs span:last-child {
+  margin-right: 0;
+}
+
+.option {
+  padding: 1px 4px;
+}
+
+.options .metadata div:not(:first-child),
+.options .logging-level div:not(:first-child) {
+  margin-top: 1px;
+}
+
+.logEntry {
+  background-color: #ffffff;
+}
+
+.logEntry:not(:first-child) {
+  margin-top: 3px;
+}
+
+.check:after {
+  content: '✔';
+  position: absolute;
+  right: 22px;
+}
+
+.debug {
+  background-color: #337ab7;
+}
+
+.options .debug:hover {
+  background-color: #286090;
+  cursor: pointer;
+}
+
+.info {
+  background-color: #5bc0de;
+}
+
+.options .info:hover {
+  background-color: #31b0d5;
+  cursor: pointer;
+}
+
+.warn {
+  background-color: #f0ad4e;
+}
+
+.options .warn:hover {
+  background-color: #ec971f;
+  cursor: pointer;
+}
+
+.error {
+  background-color: #d9534f;
+}
+
+.options .error:hover {
+  background-color: #c9302c;
+  cursor: pointer;
+}
+
+.fatal {
+  background-color: #d9534f;
+}
+
+.options .fatal:hover {
+  background-color: #c9302c;
+  cursor: pointer;
+}
+
+.location-information {
+  background-color: #95acda;
+}
+
+.options .location-information:hover {
+  background-color: #7c8fb6;
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-var loggingStream = require('../services/loging-stream');
+var loggingStream = require('../services/logging-stream');
 
 module.exports = function (app) {
 

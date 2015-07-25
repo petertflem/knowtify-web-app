@@ -4,13 +4,32 @@ html
     title kns web app
   
     link(rel='stylesheet', href='/stylesheets/css/vendor/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/css/main.css')
   
     body
       div.container
         div.row
-          div.col-sm-12
+          div.col-md-3.col-md-push-9.options
+            h1 Options
+            
+            h4 Metadata
+            div.metadata
+              div(data-option='npm-module').location-information.option NPM Module
+              div(data-option='javascript-file').location-information.option Javascript file
+              div(data-option='function').location-information.option Function
+              div(data-option='line-number').location-information.option Line number
+            
+            h4 Log Level
+            div.logging-level
+              div(data-option='log-level-debug').debug.option Debug
+              div(data-option='log-level-info').info.option Info
+              div(data-option='log-level-warning').warn.option Warning
+              div(data-option='log-level-error').error.option Error
+              div(data-option='log-level-fatal').fatal.option Fatal
+            
+          div.col-md-9.col-md-pull-3
             h1 Hello! Here are your logs:
-            div#logs(style='font-family: "Courier New"')
+            div#logs.logs
     
     script(src='/javascript/vendor/jquery.min.js')
     script(src='/socket.io/socket.io.js')

@@ -21,4 +21,4 @@ app.set('views', __dirname + '/views');
 server.listen(port);
 
 // TEST
-require('./services/loging-stream').init(server);
+require('./services/logging-stream').init(server);
