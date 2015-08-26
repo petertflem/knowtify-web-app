@@ -21,13 +21,15 @@ body {
 }
 
 .metadata div,
-.logging-level div {
+.logging-level div,
+.npm-module div {
   padding: 1px 4px;
   cursor: pointer;
 }
 
 .options .metadata div:not(:first-child),
-.options .logging-level div:not(:first-child) {
+.options .logging-level div:not(:first-child),
+.options .npm-module div:not(:first-child) {
   margin-top: 1px;
 }
 
@@ -85,11 +87,13 @@ body {
   background-color: #c9302c;
 }
 
-.location-information {
+.location-information,
+.npm-module div {
   background-color: #95acda;
 }
 
-.metadata .location-information:hover {
+.metadata .location-information:hover,
+.npm-module div:hover {
   background-color: #7c8fb6;
 }
 

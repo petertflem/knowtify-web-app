@@ -1,5 +1,6 @@
 (function () {
   var socket = io.connect(window.document.location.origin + '/logs');
+  var npmModules = {};
 
   socket.on('logs', function (data) {
     var div = document.createElement('div');
@@ -9,14 +10,33 @@
     message.innerHTML = '$ ' + data.message;
 
     div.appendChild(createMetaDataElement('timestamp', '', data.date + ' ' + data.time));
+
     var logLevel = createMetaDataElement('log-level', data.logLevel, data.logLevel.toUpperCase());
     logLevel.setAttribute('data-filter', data.logLevel);
     div.appendChild(logLevel);
-    div.appendChild(createMetaDataElement('npm-module', 'location-information', data.origin.npmModule));
+
+    var npmModule = createMetaDataElement('npm-module', 'location-information', data.origin.npmModule);
+    npmModule.setAttribute('data-npm-module-name', data.origin.npmModule);
+    div.appendChild(npmModule);
+
     div.appendChild(createMetaDataElement('javascript-file', 'location-information', data.origin.filename));
     div.appendChild(createMetaDataElement('function', 'location-information', data.origin.fn));
     div.appendChild(createMetaDataElement('line-number', 'location-information', data.origin.lineNumnber));
     div.appendChild(message);
+
+    if (!npmModules[data.origin.npmModule]) {
+      npmModules[data.origin.npmModule] = true;
+      var npmModuleToggle = document.createElement('div');
+      npmModuleToggle.innerHTML = data.origin.npmModule;
+      npmModuleToggle.className = 'check';
+
+      $(npmModuleToggle).on('click', function () {
+        $('[data-npm-module-name="' + data.origin.npmModule + '"]').parent().toggle();
+        $(this).toggleClass('check');
+      });
+
+      $('.npm-module').append(npmModuleToggle);
+    }
 
     document.getElementById('logs').appendChild(div);
   });
