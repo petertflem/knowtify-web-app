@@ -21,7 +21,7 @@
 
     div.appendChild(createMetaDataElement('javascript-file', 'location-information', data.origin.filename));
     div.appendChild(createMetaDataElement('function', 'location-information', data.origin.fn));
-    div.appendChild(createMetaDataElement('line-number', 'location-information', data.origin.lineNumnber));
+    div.appendChild(createMetaDataElement('line-number', 'location-information', data.origin.lineNumber));
     div.appendChild(message);
 
     if (!npmModules[data.origin.npmModule]) {
